@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 01</title>
+</head>
+<body>
+    <h1>OLÁ, ME INFORME SOBRE O TIME QUE VOCÊ TORCE: </h1> <br>
+    Nome do Time: <input type="text" id="input_nomeTime"> <br>
+    Quantidade de títulos: <input type="number" id="input_qntTitulos"> <br>
+
+    <button onclick="cadastrar()">Amo meu Time</button>
+</body>
+</html>
+
+<script>
+    function cadastrar(){
+        var time = input_nomeTime.value
+        var titulos = Number(input_qntTitulos.value);
+        alert(`O time ${time} tem ${titulos} títulos`)
+    }
+</script>

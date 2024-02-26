@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 01</title>
+</head>
+<body>
+    <h1>OLÁ, ME INFORME: </h1> <br>
+    Peso: <input type="number" id="input_peso"> <br>
+    Altura(INFORMAR EM CM): <input type="number" id="input_altura"> <br>
+
+    <button onclick="cadastrar()">Fale comigo!</button>
+</body>
+</html>
+
+<script>
+    function cadastrar(){
+        var Peso = Number(input_peso.value);
+        var Altura = Number(input_altura.value / 100);
+        alert(`Você pesa ${Peso}KG e tem ${Altura}M de altura`)
+    }
+</script>

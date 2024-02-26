@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 01</title>
+</head>
+<body>
+    <h1>OLÁ, ME INFORME SOBRE O SEU ENDEREÇO: </h1> <br>
+    Rua/avenida/vila: <input type="text" id="input_endereco"> <br>
+    Numero da casa: <input type="number" id="input_numeroLogradouro"> <br>
+
+    <button onclick="cadastrar()">Amo meu Time</button>
+</body>
+</html>
+
+<script>
+    function cadastrar(){
+        var endereco = input_endereco.value
+        var numeroLogradouro = Number(input_numeroLogradouro.value);
+        alert(`Seu logradouro é ${endereco}`)
+        alert(`O número do seu logradouro é ${numeroLogradouro}`)
+    }
+</script>

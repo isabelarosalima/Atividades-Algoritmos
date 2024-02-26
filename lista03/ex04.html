@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Olá, guerreiro! Me informe:</h1>
+    Seu nome: <input type="text" id="input_nome"> <br>
+    Seu Ki normal: <input type="number" id="input_ki"> <br>
+
+    <button onclick="calcular()">Ver ki em cada forma</button>
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var nome = input_nome.value;
+        var kiNormal= Number(input_ki.value);
+        var kiSayajin = kiNormal * 50;
+        var kiSayajin2 = kiNormal * 100;
+
+        alert(`Olá guerreiro ${nome}, você na evolução Super Sayajin possui uma força igual a ${kiSayajin}ki `);
+        alert(`E agora guerreiro ${nome}, você na evolução Super Sayajin 2 possui uma força igual a ${kiSayajin2}ki`);
+    }
+</script>

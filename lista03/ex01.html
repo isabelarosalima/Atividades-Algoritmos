@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Forneça as seguintes informações</h1> <br>
+    IDADE <input type="number" id="input_idade"> <br>
+    <button onclick="consultarHomem()">Aponsetadoria Homem</button>
+    <button onclick="consultarMulher()">Aponsetadoria Mulher</button>
+</body>
+</html>
+
+<script>
+    function consultarHomem(){
+        var idade = Number(input_idade.value);
+        var conta = (70 - idade);
+
+        alert(`Faltam ${conta} anos para se aposentar`);
+    }
+
+    function consultarMulher(){
+        var idade = Number(input_idade.value);
+        var conta = (60 - idade);
+
+        alert(`Faltam ${conta} anos para se aposentar`);
+
+    }
+
+</script>
