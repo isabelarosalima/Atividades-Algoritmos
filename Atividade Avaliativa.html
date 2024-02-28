@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE AVALIATIVA</title>
+</head>
+<body>
+    <h1>Calcule seu índice de Massa Corporal (IMC)</h1> 
+    <h3>Informe os dados abaixo</h3>
+    Nome completo: <input type="text" id="input_nomeCompleto"> <br>
+    Peso (em quilogramas): <input type="number" id="input_pesoKg"> <br>
+    Altura (em metros): <input type="number" id="input_alturaMetros"> <br> <br>
+
+    <button onclick="calcular()"> Calcular medidas</button>
+    
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var nomeCompleto = input_nomeCompleto.value;
+        var pesoKg = Number(input_pesoKg.value);
+        var alturaMetros = Number(input_alturaMetros.value);
+        var alturaPes = alturaMetros / 0.3048;
+        var pesoOz = pesoKg *  35.274;
+
+        var IMC = pesoKg / (alturaMetros * alturaMetros);
+        var IMCalternativo =  pesoOz / (alturaPes * alturaPes)
+
+        alert(`${nomeCompleto} seu IMC é de: ${IMC}. A sua altura em pés é de: ${alturaPes}. O seu peso em onças é de: ${pesoOz}. O seu IMC em pés/onças é de: ${IMCalternativo} `)
+       
+    }
+</script>
