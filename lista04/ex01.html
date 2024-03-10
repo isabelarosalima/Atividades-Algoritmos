@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcule a fase do seu sono! Me informe suas horas dormidas:</h1> <br>
+    Quantidade de horas dormidas: <input type="number" id="input_horasDormidas"> 
+    
+    <button onclick="calcular()">Calcular sono</button>
+    
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var horasDormidas = Number(input_horasDormidas.value)
+            var fase1 = (horasDormidas * 5) / 100;
+            var fase2 = (horasDormidas * 45) / 100;
+            var fase3 = (horasDormidas * 30) / 100;
+            var faseREM = (horasDormidas * 20) / 100;
+
+     div_resultado.innerHTML = `Ao dormir ${horasDormidas} horas, você dormiu: <br>
+      <b>${fase1}</b> horas na fase 1 <br> <b>${fase2}</b> horas na fase 2 <br> <b>${fase3}</b> horas na fase 3 <br> <b>${faseREM}</b> horas na fase REM`
+    }
+</script>

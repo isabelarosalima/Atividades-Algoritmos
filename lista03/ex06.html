@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe um número: <input type="number" id="input_numero1"> <br>
+    Informe outro número: <input type="number" id="input_numero2"> <br>
+
+    <button onclick="calcularSoma()">Calcular Soma</button>
+    <button onclick="calcularSubtracao()">Calcular Subtração</button>
+    <button onclick="calcularProduto()">Calcular Produto</button>
+    <button onclick="calcularRazao()">Calcular Razão</button>
+    
+</body>
+</html>
+
+<script>
+    function calcularSoma(){
+        var n1 = Number(input_numero1.value);
+        var n2 = Number(input_numero2.value);
+        var soma = n1 + n2;
+        var mensagem = ` A soma entre ${n1} e ${n2} é ${soma}`;
+
+        alert(mensagem);
+    }
+
+    function calcularSubtracao(){
+        var n1 = Number(input_numero1.value);
+        var n2 = Number(input_numero2.value);
+        var sub = n1 - n2;
+        var mensagem = ` A subtração entre ${n1} e ${n2} é ${sub}`;
+
+        alert(mensagem);
+    }
+
+    function calcularProduto(){
+        var n1 = Number(input_numero1.value);
+        var n2 = Number(input_numero2.value);
+        var produto = n1 * n2;
+        var mensagem = ` O Produto entre ${n1} e ${n2} é ${produto}`;
+
+        alert(mensagem);
+    }
+
+    function calcularRazao(){
+        var n1 = Number(input_numero1.value);
+        var n2 = Number(input_numero2.value);
+        var razao = n1 / n2;
+        var mensagem = ` A razão entre ${n1} e ${n2} é ${razao}`;
+
+        alert(mensagem);
+    }
+</script>

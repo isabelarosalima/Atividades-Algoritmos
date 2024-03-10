@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe a temperatura do ambiente:
+    <input type="number" id="input_temperatura">
+    
+    <button onclick="verificar()">Verificar Clima</button>
+    <div id="div_alimento"></div>
+
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var temperatura = Number(input_temperatura.value);
+
+        if (temperatura < 10){
+            div_alimento.innerHTML = ` <img src="AlimentoConservado.jpeg" alt="alimentoConservado" height="500px" width="500px">`
+        } else{
+            div_alimento.innerHTML = `
+            <img src="AlimentoPodre.jpeg" alt="alimentoConservado" height="500px" width="500px"> `
+        }
+
+        
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Identificador de cheque especial</h3>
+    Informe o saldo da conta: <input type="number" id="input_saldoConta"> <br>
+    Valor do debito: <input type="number" id="input_debitoRetirar"> <br>
+
+    <button onclick="analisar()" >Analisar conta</button>
+
+    <div id="div_frase"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var saldoConta = Number(input_saldoConta.value);
+        var valorDebitado = Number(input_debitoRetirar.value);
+
+        var saldoAtual = saldoConta - valorDebitado;
+
+        if(saldoAtual < 0){
+            div_frase.innerHTML = `<p style="color: red;"> <b> o saldo atual da conta corrente é ${saldoAtual}</b> </p> `
+        }
+        else{
+            div_frase.innerHTML = `<p style="color: blue;"> <i> o saldo atual da conta corrente é ${saldoAtual}</i> </p> `
+        }
+    }
+</script>

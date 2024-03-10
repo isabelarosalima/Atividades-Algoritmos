@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Calcular Média do aluno</h1>
+    Nota continuada: <input type="number" id="input_continuada"> <br>
+    Nota semestral: <input type="number" id="input_semestral"> <br>
+    Nome completo: <input type="text" id="input_nome"> <br>
+
+    <button onclick="calcular()"> Calcule sua média</button>
 </body>
 </html>
+
+<script>
+    function calcular(){
+        var notaContinuada = Number((input_continuada.value * 40) / 100);
+        var notaSemestral = Number((input_semestral.value * 60) / 100);
+            var mediaNotas = notaContinuada + notaSemestral;
+        var nome = input_nome.value;
+
+        alert(`A média de ${nome} será de ${mediaNotas}".`)
+    }
+</script>

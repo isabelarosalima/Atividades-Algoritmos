@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>PROMOÇÃO MERCADO BOM</h3>
+    Informe a quantidade de chocolates comprados:
+    <input type="number" id="input_chocolatesComprados"> <br>
+
+    <button onclick="calcularComprar()"> Compra</button>
+    
+</body>
+</html>
+
+<script>
+    function calcularComprar(){
+        var qntChocolates = Number(input_chocolatesComprados.value);
+        var valorNormal = qntChocolates * 3
+        var valorDesconto = qntChocolates *2.5
+
+        if(qntChocolates < 13){
+            alert(`o valor da sua compra foi de ${valorNormal}`)
+        }
+        else{
+            alert(`o valor da sua compra foi de ${valorDesconto}`)
+        }
+    }
+
+
+</script>
