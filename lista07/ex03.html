@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 3</title>
+</head>
+<body>
+    <h1>Informe uma temperatura e veja a situação em que esta:</h1>
+    <input type="number" id="input_temperatura"> <br> <br>
+
+    <button onclick="consultar()">Consultar Situação</button>
+    <div id="div_situaçãoTemp"></div>
+</body>
+</html>
+
+<script>
+    function consultar(){
+        var temperatura = Number(input_temperatura.value);
+
+        if(temperatura < 14){
+            div_situaçãoTemp.innerHTML = `Congelante`
+        } else if (temperatura <= 21){
+            div_situaçãoTemp.innerHTML = `Com frio`
+        } else if (temperatura <= 24){
+            div_situaçãoTemp.innerHTML = `Confortável`
+        } else if (temperatura <= 31){
+            div_situaçãoTemp.innerHTML = `Com calor`
+        }else {
+            div_situaçãoTemp.innerHTML = `Calor escaldante`
+        }
+    }
+
+
+</script>

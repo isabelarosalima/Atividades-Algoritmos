@@ -7,7 +7,7 @@
 </head>
 <body>
     <h3>Veja o resultado da eleição</h3>
-    Informe a quantidade de voto
+    Informe a quantidade de votos <br>
     Candidato A: <input type="number" id="input_candidatoA"> <br>
     Candidato B: <input type="number" id="input_candidatoB"> <br>
     Votos Brancos: <input type="number" id="input_brancos"> <br>
@@ -25,8 +25,15 @@
         var candidatoB = Number(input_candidatoB.value);
         var votosBrancos = Number(input_brancos.value);
         var votosNulos = Number(input_nulos.value);
-            var totalVotos = candidatoA + candidatoB + votosBrancos + votosNulos;
-            var votosInvalidos = votosBrancos + votosNulos;
+        var votosInvalidos = votosBrancos + votosNulos;
+        var totalVotos = candidatoA + candidatoB + votosInvalidos;
+           
+
+        mostrar_votos.innerHTML = `
+        Total de votos: ${totalVotos} <br>
+        Candidato A: ${(candidatoA / totalVotos) * 100}% (${candidatoA} votos) <br>
+        Candidato B: ${(candidatoB / totalVotos) * 100}% (${candidatoB} votos)<br>
+        Candidato Inválidos: ${(votosInvalidos / totalVotos) * 100}% (${votosInvalidos} votos)`
         
        
     }

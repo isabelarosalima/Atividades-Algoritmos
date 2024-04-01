@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 08</title>
+</head>
+<body>
+    <h1>Critérios para preferência de empresas</h1>
+    Nome da empresa: <input type="text" id="input_nomeEmpresa"> <br>
+    Valor da bolsa:<input type="number" id="input_valorBolsa"> <br>
+    Valor do VR: <input type="number" id="input_valorVr"> <br>
+    Tempo de deslocamento (da empresa para a SPTech): <input type="number" id="input_tmpDeslocamento"> <br>
+    <button onclick="verificar()">É preferida?</button>
+    <div id="div_resposta"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        let nomeEmpresa = input_nomeEmpresa.value;
+        let valorBolsa = input_valorBolsa.value;
+        let valorVR = input_valorVr.value;
+        let tmpDeslocamento = input_tmpDeslocamento.value;
+
+        if (valorBolsa >= 1800 || valorVR >= 20 || tmpDeslocamento <= 30){
+            div_resposta.innerHTML = `A empresa ${nomeEmpresa} é uma de suas preferências`
+        } else{
+            div_resposta.innerHTML = `A empresa ${nomeEmpresa}  está fora da sua lista`
+        }
+    }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>exercicio 11/title>
+</head>
+<body>
+<h2>Recarga do Cartão Fidelidade do Metrô de São Paulo</h2>
+Quantidade de Passagens:
+<input type="number" id="input_quantidade" min="1">
+<button onclick="comprarPassagens()">Comprar</button>
+<div id="totalAPagar"></div>
+
+<script>
+function comprarPassagens() {
+  let quantidade = Number(input_quantidade.value);
+  var valorPassagem = 4.40;
+  var desconto = 0;
+  var totalAPagar = 0;
+
+  if (quantidade >= 8 && quantidade <= 50) {
+    if (quantidade >= 8 && quantidade <= 19) {
+     
+        desconto = 0.03;
+
+    } else if (quantidade >= 20 && quantidade <= 49) {
+
+        desconto = 0.05;
+
+    } else {
+
+        desconto = 0.07;
+
+    }
+    totalAPagar = (quantidade * valorPassagem) * (1 - desconto);
+    totalAPagar.innerHTML = `Total a pagar: R$${totalAPagar}`
+
+  } else {
+    alert("Quantidade inválida para o Fidelidade!");
+
+  }
+}
+</script>
+</body>
+</html>

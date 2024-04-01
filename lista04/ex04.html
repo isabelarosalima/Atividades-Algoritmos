@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PIZZARIA DA ISA</h1>
+    <h3>Calcule seu pedido e divida com seus amigos!</h3> 
+    Sabor: <input type="text" id="input_sabor"> <br>
+    Preço: <input type="number" id="input_preco"> <br>
+    Quantidade de amigos: <input type="number" id="input_qntAmigos"> <br>
+
+    <button onclick="calcular()">Ver valor por amigo</button>
+    <div id="div_precoPorAmigos"></div>
+
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var sabor = input_sabor.value;
+        var preco = Number(input_preco.value) ;
+        var precoComCaixinha = (preco * 0.1) + preco;
+        var qntAmigos = Number(input_qntAmigos.value);
+            var precoDividido = precoComCaixinha / qntAmigos;
+
+        div_precoPorAmigos.innerHTML = `Cada amigo vai colaborar com R$${precoDividido} para a pizza de ${sabor}`
+    }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Intervalo da altura desejada para os próximos pilotos!</h3>
+    altura inicial: <input type="number" id="input_alturaInicial"> <br>
+    altura final: <input type="number" id="input_alturaFinal"> <br>
+    <h3>informações do candidato a piloto!</h3>
+    nome do candidato:  <input type="text" id="input_nomeCandidato"> <br>
+    altura do candidato: <input type="number" id="input_alturaCandidato"> <br>
+    <button onclick="verificar()">verificar</button>
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        let alturaInicial = Number(input_alturaInicial.value);
+        let alturaFinal = Number(input_alturaFinal.value);
+        let alturaCandidato = Number(input_alturaCandidato.value);
+        let nome = input_nomeCandidato.value
+      
+        if(alturaInicial > 1 && alturaFinal > alturaInicial){
+            if(alturaCandidato >= alturaInicial && alturaCandidato <= alturaFinal){
+                div_resposta += `O candidato ${nome} com altura de ${alturaCandidato}  participará do processo de seleção de piloto`
+            } else {
+                div_resposta += `Infelizmente o candidato ${nome}  com altura de ${alturaCandidato}  não atende os requisitos`
+            }
+        } else {
+            div_resposta += `ERRO`
+        }
+       
+    }
+</script>

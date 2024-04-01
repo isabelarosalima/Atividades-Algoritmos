@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>RECOMENDAÇÕES PARA A NETFLIX</h1>
+    Informe a hora do dia em que costuma acessar a plataforma: <input type="number" id="input_horarioAcesso"> <br>
+    <button onclick="acessar()">Ver recomendação</button>
+    <div id="mostrar_mensagem"></div>
+</body>
+</html>
+<script>
+    function acessar(){
+        let horario = Number(input_horarioAcesso.value);
+
+        if (horario >= 19 && horario <= 21){
+            mostrar_mensagem.inner.HTML = `Não é recomendável que você assista sua série favorita no horário ${horario}!`
+        }else{
+            mostrar_mensagem.inner.HTML = `O horário ${horario} é adequado para assistir sua série favorita!`
+        }
+    }
+</script>

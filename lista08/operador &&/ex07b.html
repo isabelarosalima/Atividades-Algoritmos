@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bem-Vindo</h1>
+    Login: <input type="number" id="input_login"> <br>
+    Senha: <input type="password" id="input_senha">
+    <button onclick="avaliar()">Entrar</button>
+</body>
+</html>
+<script>
+    function avaliar(){
+        let login = Number(input_login.value);
+        let senha = Number(input_senha.value);
+    
+        if(logim == 'SPTech' && senha == 'digital'){
+            alert(`Usuário autenticado com sucesso`)
+        }else{
+            alert(`Falha na autenticação`)
+        }
+    }
+</script>

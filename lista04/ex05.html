@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calcule seu VT</h2>
+    Valor passagem de ônibus: <input type="number" id="input_valorPassagem"> <br>
+    Quantidade de viagens por mês: <input type="number" id="input_qntViagem"> <br>
+    Distância do trabalho até sua casa (em km): <input type="number" id="input_distanciaKm"> <br>
+        <button onclick="calcular()">Calcular VT</button>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function calcular(){
+        var valorPassagem = Number(input_valorPassagem.value);
+        var qntViagens = Number(input_qntViagem.value);
+        var distanciaKm = Number(input_distanciaKm.value);
+        var porcentagemViagensAplicativo =(qntViagens * 0.1);
+        var valorAplicativo = (distanciaKm * 0.75) * porcentagemViagensAplicativo;
+        var valorTransporte = valorPassagem * (qntViagens - porcentagemViagensAplicativo);
+        var valorTotal = + valorTransporte + valorAplicativo;
+
+        div_mensagem.innerHTML = `Você vai gastar R$${valorTotal} por mês com transporte`
+    }
+</script>

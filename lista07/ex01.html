@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1</title>
+</head>
+<body>
+    Informe sua altura (em cm): <input type="number" id="input_altura"> <br>
+    <button onclick="determinar()">Analisar Estatura</button>
+    <div id="mostrar_resultado"></div>
+    
+</body>
+</html>
+<script>
+    function determinar(){
+        var altura = Number(input_altura.value);
+
+        if(altura <= 1.65 ){
+            mostrar_resultado.innerHTML = `Você pode ser piloto de corrida`
+        }else if(altura <= 1.80){
+            mostrar_resultado.innerHTML = `Você pode ser jogador de futebol`
+        } else{
+            mostrar_resultado.innerHTML = `Você pode ser jogador de vôlei ou basquete`
+        }
+    }
+</script>

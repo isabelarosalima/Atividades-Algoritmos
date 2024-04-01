@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1</title>
+</head>
+<body>
+    <h1>Bem-vindo a Mentes Brilhantes</h1>
+    <h3>Informe os seguintes dados</h3>
+    Nota do Enem: <input type="number" id="input_enem"> <br>
+    Nota do Vestibular Interno: <input type="number" id="input_vestibular"> <br>
+    <button onclick="avaliar()">Avaliação </button>
+</body>
+</html>
+<script>
+    function avaliar(){
+        let notaEnem = Number(input_enem.value);
+        let notaInterna = Number(input_vestibular.value);
+
+        if(notaEnem >= 800 || notaInterna >= 700){
+            alert(`Parabéns! Aprovado`)
+        } else{
+            alert(`Tente semestre que vem!`)
+        }      
+    }
+
+</script>

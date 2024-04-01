@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 6</title>
+</head>
+<body>
+    <h3>Quais dos seguintes times de são paulo você torce? (São Paulo, Palmeiras, Corinthians ou Santos)</h3>
+    <input type="" id="input_time"> <br>
+    <button onclick="consultar()">Fale sobre esse time</button>
+        <div id="div_times"></div>
+        
+</body>
+</html>
+<script>
+    function consultar(){
+        var time = input_time.value;
+        
+        if (time == 'São Paulo'){
+            div_times.innerHTML =`<p style="background-color: black; color: red;">Salve o Tricolor paulista</p>`
+
+        }else if (time == 'Palmeiras'){
+            div_times.innerHTML =`<p style="background-color: green;">Salve o alviverde imponente</p>`
+
+        }else if (time == 'Corinthians '){
+            div_times.innerHTML =`  <p style="background-color: black; color: white;">Salve o Corinthians</p>`
+            
+        }else{
+            div_times.innerHTML =`Agora quem dá a bola é o Santos`
+        
+        }
+           
+
+        
+    
+    }
+</script>
