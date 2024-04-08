@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite um numero entre 20 e 100? <br>
+    <input type="number" id="input_numero" min="20" max="100"> <br>
+    <button onclick="digitar()">Adoro múltiplos de 5...</button>
+    <div id="frase_mostrada"></div>
+</body>
+</html>
+<script>
+    function digitar(){
+        let numero = input_numero.value
+     
+        if (numero >= 20 && numero <= 100){
+            for (let contador = 1; contador <= numero; contador += 1) {
+                if(contador % 5 == 0){
+                    frase_mostrada.innerHTML += `${contador} <br>`;
+                }
+
+            }
+        }
+    }
+</script>

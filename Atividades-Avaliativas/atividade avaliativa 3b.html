@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade avaliativa</title>
+</head>
+<body>
+    <div id="div_proximaPagina">
+        <h1>O Banco KNAB é a sua melhor opção</h1>
+        <h3>Emprestimos e Investimentos com as melhores taxas do mercado</h3>
+        <h5>Entre com os dados da simulação</h5>
+        Valor da Operação: <input type="number" id="input_valorOperação" placeholder="valor"> <br><br>
+        <select name="" id="select_operacoes" >
+            <option value="1">Empréstimo
+            </option>
+            <option value="2">Investimento</option>
+        </select>
+        <select name="" id="select_prazos">
+            <option value="1">Curto</option>
+            <option value="2">Médio</option>
+            <option value="3">Longo</option>
+        </select>
+        <br> <br>
+        <button onclick="mostrar()">Mostrar Resultado</button>
+
+        <div id="div_mensagem"></div>
+    </div>
+</body>
+</html>
+<script>
+    function mostrar(){
+        let valor = Number(input_valorOperação.value);
+        const prazo = select_prazos.value
+        const operacao = select_operacoes.value
+            let taxaCurto = ((valor * 24)/100);
+            let taxaMedio = ((valor * 16)/100);
+            let taxaLongo = ((valor * 10)/100);
+     
+            let taxaCurtoIn = ((valor * 5)/100);
+            let taxaMedioIn = ((valor * 8)/100);
+            let taxaLongoIn = ((valor * 12)/100);
+        
+            let taxaEscolhida = 0
+    if(operacao == 1){
+        if(prazo == 1 ){
+            alert(`Esta operação está condicionada ao seu perfil`)
+            taxaEscolhida == taxaCurto
+            prazo == 'Curto'
+        } else if (prazo == 2 ){
+            alert(`Esta operação está condicionada ao seu perfil`)
+            taxaEscolhida == taxaMedio
+            prazo == 'Médio'
+        }else{
+            taxaEscolhida == taxaLongo
+            prazo == 'Longo'
+        }
+        div_mensagem.innerHTML =+ `Simulação para o empréstimo de R$${valor} no ${prazo} prazo será cobrado os juros de R$ ${taxaEscolhida} ao ano`
+ 
+    } else if (operacao == 2){
+        if(prazo == 1 ){
+            alert(`Esta operação está condicionada ao seu perfil`)
+            taxaEscolhida == taxaCurtoIn
+            prazo == 'Curto'
+        } else if (prazo == 2 ){
+            alert(`Esta operação está condicionada ao seu perfil`)
+            taxaEscolhida == taxaMedioIn
+            prazo == 'Médio'
+        }else{
+            taxaEscolhida == taxaLongoIn
+            prazo == 'Longo'
+        }
+        div_mensagem.innerHTML =+ `Simulação – Investindo ${valor} no ${prazo} prazo o seu rendimento será de R$ ${taxaEscolhida} ao ano`
+        
+            
+    }
+}
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="digitar()">Diga algo sobre a matéria de algoritimos</button>
+    <div id="frase_mostrada"></div>
+</body>
+</html>
+<script>
+    function digitar(){
+        let frase = 'A matéria de algoritimos é complexa e requer dedicação.'
+
+        for (let contador = 1; contador <= 7; contador += 1) {
+            frase_mostrada.innerHTML += `${frase}<br>`;
+        }
+    }
+</script>

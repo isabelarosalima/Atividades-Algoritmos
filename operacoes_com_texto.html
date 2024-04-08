@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Operações com Textos</h1>
+
+    <h5>Digite uma frase:</h5>
+    <input id="input_frase" />
+    <br>
+    <h5>Digite a posição da letra que quer ver:</h5>
+      <input type="number" id="input_posicaoLetra">
+      <span id="span_posicaoLetra"></span>
+      <br>
+
+      <button onclick="analisarTextos()">Analisar</button>
+      
+      <div id="div_respostas">
+        Quantidade de caracteres:
+        <b>
+          <span id="span_qtd_letras"></span>
+        </b>
+        <br>
+    
+        Começa com "a"?
+        <b>
+          <span id="span_comeca_a"></span>
+        </b>
+        <br>
+    
+        Começa com "e"?
+        <b>
+          <span id="span_comeca_e"></span>
+        </b>
+        <br>
+    
+        Termina com ".com"?
+        <b>
+          <span id="span_termina_com"></span>
+        </b>
+        <br>
+    
+        Termina com "e"?
+        <b>
+          <span id="span_termina_e"></span>
+        </b>
+        <br>
+    
+        Termina com "@"?
+        <b>
+          <span id="span_termina_arroba"></span>
+        </b>
+        <br>
+    
+        Primeira letra da frase:
+        <b>
+          <span id="span_primeira_letra"></span>
+        </b>
+        <br>
+    
+        Terceira letra da frase:
+        <b>
+          <span id="span_terceira_letra"></span>
+        </b>
+        <br>
+    
+        Última letra da frase:
+        <b>
+          <span id="span_ultima_letra"></span>
+        </b>
+        <br>
+    
+        Onde está o primeiro @?
+        <b>
+          <span id="span_primeira_arroba"> </span>
+        </b>
+        <br>
+  
+        Índice de "abc":
+        <b>
+          <span id="span_indice_abc"></span>
+        </b>
+        <br>
+    
+        Como fica em maiúsculo (CAIXA ALTA):
+        <b>
+          <span id="span_maiusculo"></span>
+        </b>
+        <br>
+    
+        Como fica em minúsculo (caixa baixa):
+        <b>
+          <span id="span_minusculo"></span>
+        </b>
+        <br>
+    
+        Frase original:
+        <b>
+          <span id="span_frase_original"></span>
+        </b>
+        <br>
+    
+        Frase com @ no primeiro 'a':
+        <b>
+          <span id="span_arroba_no_a"></span>
+        </b>
+        <br>
+    
+        Frase sem espaços:
+        <b>
+          <span id="span_sem_espacos"></span>
+        </b>
+       <br>
+    
+        Frase com 4, 5 e 3:
+        <b>
+          <span id="span_numeros"></span>
+        </b>
+      </div>
+  </body>
+</html>
+
+<script>
+  function analisarTextos() {
+    const frase = input_frase.value;
+    // o valor da const não muda mesmo tentando mudar após a criação!
+
+    span_qtd_letras.innerHTML = `A frase tem ${frase.length} caracteres`;
+    // o espaço conta!
+    // input_frase.value.length == comprimento de texto (caracteres) == atributo de texto;
+    
+    if(frase.startsWith('A')){
+      span_comeca_a.innerHTML = `sim`;
+    
+    } 
+    else {
+      span_comeca_a.innerHTML = `não`
+    }
+
+    if(frase.startsWith('e')){
+      span_comeca_e.innerHTML = `sim`;
+    
+    } 
+    else {
+      span_comeca_e.innerHTML = `não`
+    }
+
+    if(frase.endsWith('.com')){
+      span_termina_com.innerHTML = `sim`;
+    
+    } 
+    else {
+      span_termina_com.innerHTML = `não`
+    }
+
+    if(frase.endsWith('.e')){
+      span_termina_e.innerHTML = `sim`
+    } 
+    else {
+      span_termina_e.innerHTML = `não`
+    }
+
+    if(frase.endsWith('@')){
+      span_termina_arroba.innerHTML = `sim`
+    }
+    else{
+      span_termina_arroba.innerHTML = `não`
+    }
+    // (100).toString() == transformar valores em texto
+    // frase.startsWith('m') == começa com que letra?  NÃO ACEITA OPERADOR LÓGICO 
+    // frase.endsWith('m') == termina com que letra?
+
+    span_primeira_letra.innerHTML = frase[0];
+    span_terceira_letra.innerHTML = frase[2];
+    span_ultima_letra.innerHTML = frase[frase.length - 1];
+
+    // frase == conjunto de letras, sua posição começa com 0 e a contagem dos seus caracteres começam com 1 (frase.length - 1)
+    
+    const posicaoDigitada = Number(  input_posicaoLetra.value);
+
+    if(posicaoDigitada > 0 && posicaoDigitada <= frase.length){
+      span_posicaoLetra.innerHTML = frase[posicaoDigitada - 1]
+    } else {
+      span_posicaoLetra.innerHTML = `A posição informada está incorreta, deve estar entre 1 e ${frase.length}`
+    }
+
+    const arrobaIndice = frase.indexOf("@")
+    const abcIndice = frase.indexOf("abc")
+
+    if(arrobaIndice == -1){
+      span_primeira_arroba.innerHTML = `Não encontrei o '@' na frase`;
+    }
+    else{
+      span_primeira_arroba.innerHTML = arrobaIndice;
+    }
+
+    if( abcIndice == -1){
+      span_indice_abc.innerHTML = abcIndice;
+    }
+    else{
+      span_indice_abc.innerHTML = `Não encontrei o 'abc' na frase`;
+    }
+    
+
+
+    
+  
+  }
+</script>
